@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --color-green-deep: #2F4A2B;
+  --color-green-sage: #4F6B47;
+  --color-brown-walnut: #4A2E1A;
+  --color-brown-tan: #7A5738;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #2B2B2B;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
