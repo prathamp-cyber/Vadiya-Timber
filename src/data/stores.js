@@ -78,7 +78,7 @@ export const stores = [
     name: "Vadiya Timbers - Bangalore South (Jayanagar)",
     city: "Bangalore",
     address: "7th Main, 4th Block, Jayanagar, Bangalore, Karnataka 560011",
-    phone: "+91 98765 43212",
+    phone: "+91 81607 47546",
     tagline: "Retail & Interior Wood Craft Store",
     description: "Specializing in high-grade furniture timber, solid wood doors, and tailored wood cuts for home renovations and bespoke carpentry.",
     longDescription: [
