@@ -55,21 +55,19 @@ export default function Navbar() {
   return (
     <motion.header
       variants={revealItemVariants}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${
-        isTransparent
-          ? 'bg-transparent border-b border-transparent text-white'
-          : 'bg-white border-b border-neutral-200 shadow-xs text-text-dark'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${isTransparent
+        ? 'bg-transparent border-b border-transparent text-white'
+        : 'bg-white border-b border-neutral-200 shadow-xs text-text-dark'
+        }`}
     >
       <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
         {/* Left: Brand Logo Text */}
         <Link to="/" className="flex items-center gap-3 group">
           <span
-            className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${
-              isTransparent ? 'text-white' : 'text-brown-walnut'
-            }`}
+            className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-brown-walnut'
+              }`}
           >
-            Vadiya Timber Merchant
+            Vadiya Impex
           </span>
         </Link>
 
@@ -81,22 +79,20 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-body text-sm font-medium transition-colors duration-300 relative py-1.5 group ${
-                  isTransparent
-                    ? isActive
-                      ? 'text-white font-semibold'
-                      : 'text-white/85 hover:text-white'
-                    : isActive
+                className={`font-body text-sm font-medium transition-colors duration-300 relative py-1.5 group ${isTransparent
+                  ? isActive
+                    ? 'text-white font-semibold'
+                    : 'text-white/85 hover:text-white'
+                  : isActive
                     ? 'text-brown-walnut font-semibold'
                     : 'text-text-dark hover:text-brown-walnut'
-                }`}
+                  }`}
               >
                 {link.name}
                 {/* Subtle underline on active or hovered link */}
                 <span
-                  className={`absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300 ${
-                    isTransparent ? 'bg-white' : 'bg-brown-walnut'
-                  } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                  className={`absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300 ${isTransparent ? 'bg-white' : 'bg-brown-walnut'
+                    } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
                 />
               </Link>
             );
@@ -106,9 +102,8 @@ export default function Navbar() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`md:hidden p-2 transition-colors duration-300 ${
-            isTransparent ? 'text-white hover:text-white/80' : 'text-brown-walnut hover:text-text-dark'
-          }`}
+          className={`md:hidden p-2 transition-colors duration-300 ${isTransparent ? 'text-white hover:text-white/80' : 'text-brown-walnut hover:text-text-dark'
+            }`}
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
@@ -123,11 +118,10 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className={`md:hidden px-6 py-6 border-b shadow-lg transition-colors duration-300 ${
-              isTransparent
-                ? 'bg-brown-walnut/95 border-white/10 text-white'
-                : 'bg-white border-neutral-200 text-text-dark'
-            }`}
+            className={`md:hidden px-6 py-6 border-b shadow-lg transition-colors duration-300 ${isTransparent
+              ? 'bg-brown-walnut/95 border-white/10 text-white'
+              : 'bg-white border-neutral-200 text-text-dark'
+              }`}
           >
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => {
@@ -136,15 +130,14 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`font-body text-base font-medium py-1 text-left transition-colors ${
-                      isTransparent
-                        ? isActive
-                          ? 'text-white font-semibold underline underline-offset-4'
-                          : 'text-white/85 hover:text-white'
-                        : isActive
+                    className={`font-body text-base font-medium py-1 text-left transition-colors ${isTransparent
+                      ? isActive
+                        ? 'text-white font-semibold underline underline-offset-4'
+                        : 'text-white/85 hover:text-white'
+                      : isActive
                         ? 'text-brown-walnut font-semibold underline underline-offset-4'
                         : 'text-text-dark hover:text-brown-walnut'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>

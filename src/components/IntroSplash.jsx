@@ -40,7 +40,7 @@ export default function IntroSplash({ onComplete }) {
     }
   };
 
-  const titleText = "Vadiya Timbers";
+  const titleText = "VADIYA IMPEX";
   const letters = Array.from(titleText);
 
   // Framer Motion Animation Variants
@@ -155,7 +155,7 @@ export default function IntroSplash({ onComplete }) {
               animate="visible"
               className="font-body text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E5C3A6] font-medium"
             >
-              Timber Merchant & Direct Importer
+              Timber merchants of import and export
             </motion.p>
           </div>
         </motion.div>

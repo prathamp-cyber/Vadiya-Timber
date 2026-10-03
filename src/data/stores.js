@@ -1,15 +1,21 @@
 export const stores = [
   {
     id: "gandhidham",
-    name: "Vadiya Timbers - Gandhidham Hub",
+    name: "Vadiya Impex - Gandhidham",
     city: "Gandhidham",
-    address: "Plot No 45, Timber Market, Sector 2, Gandhidham, Gujarat 370201",
-    phone: "+91 98765 43210",
-    tagline: "Primary Processing & Wholesale Timber Import Facility",
+    address: "Survey no.33, plot no. 5 Meghpar Borichi, Gandhidham (Gujarat) 370110",
+    fullAddress: "Survey no.33, plot no. 5 Meghpar Borichi, Gandhidham (Gujarat) 370110",
+    contactName: "Ashwin Vadiya",
+    phone: "+91 91063 35110",
+    contacts: [
+      { name: "Ashwin Vadiya", phone: "+91 91063 35110" },
+      { name: "Raj Vadiya", phone: "+91 81607 47546" }
+    ],
+    tagline: "Primary Processing & Wholesale Timber Import & Export Facility",
     description: "Located near Kandla Port, our Gandhidham facility is the flagship hub for importing, sawing, and treating premium teak, hardwood, and softwood timber.",
     longDescription: [
-      "Headquartered near the Kandla maritime port in Gandhidham, Gujarat, our flagship facility spans over 10 acres of dedicated timber storage, high-capacity sawing mills, and automated thermal seasoning kilns. As the primary port entry hub for Vadiya Timbers, this facility manages bulk log imports from certified sustainable teak and hardwood forests across South Asia, Africa, and South America.",
-      "Equipped with heavy-duty horizontal band saw mills and laser-guided timber sizing machinery, the Gandhidham hub provides custom dimension sawing for major structural contracts, marine timber projects, and wholesale distributors across India. Our experienced sawyers inspect every log to ensure optimal grain alignment and minimal timber wastage.",
+      "Headquartered near the Kandla maritime port in Gandhidham, Gujarat, our flagship facility spans over acres of dedicated timber storage, high-capacity sawing mills, and automated thermal seasoning kilns. As the primary port entry hub for Vadiya Impex, this facility manages bulk log imports from certified sustainable teak, Burma border, Red Sal, Honne, Hardwood forests across Burma, Africa, and Panama.",
+      "Equipped with heavy-duty horizontal and vertical machinery, the Gandhidham hub provides custom dimension sawing for major structural contracts, marine timber projects, and wholesale distributors across the region. Our experienced sawyers inspect every log to ensure optimal grain alignment and minimal timber wastage.",
       "All logs undergo scientific pressure treatment and controlled kiln seasoning on site to eliminate internal moisture and ensure long-term resistance against fungal decay and termites, making this location the powerhouse of our nationwide timber supply chain."
     ],
     image: "/images/gandhidham.jpg",

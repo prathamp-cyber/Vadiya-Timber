@@ -101,7 +101,7 @@ export default function Home() {
     <div className="w-full bg-white text-text-dark">
       {/* 1. HERO BANNER SECTION (Static background image, static container) */}
       <section
-        className="-mt-20 relative w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center text-center px-6 pt-20"
+        className="-mt-20 relative w-full min-h-screen min-h-[100svh] flex flex-col justify-between px-6 pt-24 md:pt-28 pb-12 text-center"
         style={{
           backgroundImage: `linear-gradient(rgba(43,43,43,0.65), rgba(43,43,43,0.65)), url(${heroBg})`,
           backgroundSize: 'cover',
@@ -109,7 +109,19 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="max-w-4xl mx-auto space-y-6 relative z-10 px-4 py-12">
+        {/* GST Number Header - Left aligned with Navbar Logo */}
+        <div className="w-full max-w-content mx-auto text-left relative z-10 pt-2 sm:pt-4">
+          <motion.div
+            variants={revealItemVariants}
+            className="font-body text-xs sm:text-sm text-white/80 font-medium tracking-wide"
+            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
+          >
+            GST No. 24AASFV6101B1ZF
+          </motion.div>
+        </div>
+
+        {/* Center Hero Content */}
+        <div className="max-w-4xl mx-auto space-y-6 relative z-10 px-4 py-8 my-auto text-center">
           {/* Item 2 in Reveal Sequence: Hero Headline */}
           <motion.h1
             variants={revealItemVariants}
@@ -125,7 +137,7 @@ export default function Home() {
             className="font-body text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
           >
-            Importing and processing premium teak, architectural hardwoods, and custom timber for over three decades.
+            Importing and processing premium teak, architectural hardwoods, red sal, honne and custom timbers.
           </motion.p>
 
           {/* Item 4 in Reveal Sequence: Explore Stores Button */}
@@ -140,6 +152,9 @@ export default function Home() {
             </Link>
           </motion.div>
         </div>
+
+        {/* Spacer div to balance flex justify-between */}
+        <div className="w-full max-w-content mx-auto" />
       </section>
 
       {/* 2. THREE STORE BOXES */}
@@ -170,14 +185,14 @@ export default function Home() {
                 <div className="aspect-16/10 bg-neutral-100 overflow-hidden border-b border-neutral-100">
                   <img
                     src={store.image}
-                    alt={store.name}
+                    alt={store.id === 'gandhidham' ? 'VADIYA IMPEX' : store.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Store Card Content */}
                 <div className="p-6 md:p-8 space-y-3">
                   <h3 className="font-heading text-xl md:text-2xl font-bold text-brown-walnut leading-snug">
-                    {store.name}
+                    {store.id === 'gandhidham' ? 'VADIYA IMPEX' : store.name}
                   </h3>
                   <p className="font-body text-text-muted text-sm leading-relaxed">
                     {store.tagline}

@@ -373,19 +373,43 @@ export default function Contact() {
                   {/* Address */}
                   <div className="flex items-start gap-2.5 text-xs text-text-muted leading-relaxed">
                     <FaMapMarkerAlt className="w-3.5 h-3.5 text-green-deep shrink-0 mt-0.5" />
-                    <span>{store.address}</span>
+                    <span>{store.fullAddress || store.address}</span>
                   </div>
 
-                  {/* Phone Clickable Link */}
-                  <div className="flex items-center gap-2.5 text-xs font-mono text-text-dark">
-                    <FaPhoneAlt className="w-3.5 h-3.5 text-green-deep shrink-0" />
-                    <a
-                      href={`tel:${store.phone.replace(/[^+\d]/g, '')}`}
-                      className="hover:text-green-deep transition-colors font-medium hover:underline"
-                    >
-                      {store.phone}
-                    </a>
-                  </div>
+                  {/* Phone Clickable Link(s) */}
+                  {store.contacts ? (
+                    <div className="space-y-1">
+                      {store.contacts.map((c, idx) => (
+                        <div key={idx} className="flex items-center gap-2.5 text-xs text-text-dark">
+                          <FaPhoneAlt className="w-3.5 h-3.5 text-green-deep shrink-0" />
+                          <span>
+                            <span className="font-sans font-medium text-text-dark">{c.name} &mdash; </span>
+                            <a
+                              href={`tel:${c.phone.replace(/[^+\d]/g, '')}`}
+                              className="font-mono hover:text-green-deep transition-colors font-medium hover:underline"
+                            >
+                              {c.phone}
+                            </a>
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2.5 text-xs text-text-dark">
+                      <FaPhoneAlt className="w-3.5 h-3.5 text-green-deep shrink-0" />
+                      <span>
+                        {store.contactName && (
+                          <span className="font-sans font-medium text-text-dark">{store.contactName} &mdash; </span>
+                        )}
+                        <a
+                          href={`tel:${store.phone.replace(/[^+\d]/g, '')}`}
+                          className="font-mono hover:text-green-deep transition-colors font-medium hover:underline"
+                        >
+                          {store.phone}
+                        </a>
+                      </span>
+                    </div>
+                  )}
 
                   {/* Get Directions Text Link */}
                   <div className="pt-1 border-t border-neutral-100 flex items-center justify-between">
@@ -444,15 +468,32 @@ export default function Contact() {
                     <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
                       WhatsApp Quick Chat
                     </span>
-                    <a
-                      href="https://wa.me/919876543210?text=Hello%20Vadiya%20Timbers%2C%20I%20would%20like%20to%20inquire%20about..."
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-semibold text-emerald-700 hover:text-emerald-800 hover:underline transition-colors text-sm flex items-center gap-1"
-                    >
-                      <span>+91 98765 43210</span>
-                      <span className="text-xs font-normal text-emerald-600">(Click to Chat)</span>
-                    </a>
+                    <div className="space-y-1 pt-1">
+                      <div className="font-medium text-text-dark text-sm flex items-center gap-1 flex-wrap">
+                        <span className="font-sans font-semibold text-emerald-800">Ashwin Vadiya &mdash; </span>
+                        <a
+                          href="https://wa.me/919106335110?text=Hello%20Vadiya%20Impex%2C%20I%20would%20like%20to%20inquire%20about..."
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-mono font-semibold text-emerald-700 hover:text-emerald-800 hover:underline transition-colors flex items-center gap-1"
+                        >
+                          <span>+91 91063 35110</span>
+                          <span className="text-xs font-normal text-emerald-600">(Click to Chat)</span>
+                        </a>
+                      </div>
+                      <div className="font-medium text-text-dark text-sm flex items-center gap-1 flex-wrap">
+                        <span className="font-sans font-semibold text-emerald-800">Raj Vadiya &mdash; </span>
+                        <a
+                          href="https://wa.me/918160747546?text=Hello%20Vadiya%20Impex%2C%20I%20would%20like%20to%20inquire%20about..."
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-mono font-semibold text-emerald-700 hover:text-emerald-800 hover:underline transition-colors flex items-center gap-1"
+                        >
+                          <span>+91 81607 47546</span>
+                          <span className="text-xs font-normal text-emerald-600">(Click to Chat)</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -505,7 +546,7 @@ export default function Contact() {
                   </h3>
                   <p className="text-xs text-text-muted flex items-start gap-1.5 leading-relaxed line-clamp-2">
                     <FaMapMarkerAlt className="text-green-deep text-xs shrink-0 mt-0.5" />
-                    <span>{store.address}</span>
+                    <span>{store.fullAddress || store.address}</span>
                   </p>
                   <a
                     href={store.mapsUrl}

@@ -34,7 +34,7 @@ export default function Footer() {
               <FaInstagram className="w-4 h-4" />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919106335110"
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
@@ -67,11 +67,40 @@ export default function Footer() {
                   <FaMapMarkerAlt className="text-green-sage text-xs shrink-0" />
                   <span>{store.name}</span>
                 </Link>
-                <p className="text-xs text-white/70 pl-5 leading-tight">{store.address}</p>
-                <p className="text-xs text-green-sage pl-5 font-mono flex items-center gap-1.5 pt-0.5">
-                  <FaPhoneAlt className="text-[10px]" />
-                  <span>{store.phone}</span>
-                </p>
+                <p className="text-xs text-white/70 pl-5 leading-tight">{store.fullAddress || store.address}</p>
+                {store.contacts ? (
+                  <div className="space-y-0.5 pt-0.5">
+                    {store.contacts.map((c, idx) => (
+                      <p key={idx} className="text-xs text-green-sage pl-5 flex items-center gap-1.5">
+                        <FaPhoneAlt className="text-[10px] shrink-0" />
+                        <span>
+                          <span className="font-sans font-medium text-white/90">{c.name} &mdash; </span>
+                          <a
+                            href={`tel:${c.phone.replace(/[^+\d]/g, '')}`}
+                            className="font-mono hover:underline hover:text-white transition-colors"
+                          >
+                            {c.phone}
+                          </a>
+                        </span>
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-xs text-green-sage pl-5 flex items-center gap-1.5 pt-0.5">
+                    <FaPhoneAlt className="text-[10px] shrink-0" />
+                    <span>
+                      {store.contactName && (
+                        <span className="font-sans font-medium text-white/90">{store.contactName} &mdash; </span>
+                      )}
+                      <a
+                        href={`tel:${store.phone.replace(/[^+\d]/g, '')}`}
+                        className="font-mono hover:underline hover:text-white transition-colors"
+                      >
+                        {store.phone}
+                      </a>
+                    </span>
+                  </p>
+                )}
               </div>
             ))}
           </div>

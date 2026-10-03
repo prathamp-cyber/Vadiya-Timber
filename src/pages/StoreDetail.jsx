@@ -94,6 +94,10 @@ export default function StoreDetail() {
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-brown-walnut">
             About This Branch
           </h2>
+          <div className="space-y-1 font-body text-lg md:text-xl font-semibold text-brown-walnut" style={{ color: '#4A2E1A' }}>
+            <p>Founder: Ashwin Vadiya</p>
+            <p>Co-Founder: Raj Vadiya</p>
+          </div>
           <div className="space-y-4 text-text-muted text-base md:text-lg leading-relaxed">
             {store.longDescription ? (
               store.longDescription.map((paragraph, idx) => (
@@ -232,20 +236,41 @@ export default function StoreDetail() {
                 <FaMapMarkerAlt className="w-5 h-5 text-green-deep shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-base">Address</h4>
-                  <p className="text-text-muted text-sm leading-relaxed">{store.address}</p>
+                  <p className="text-text-muted text-sm leading-relaxed">{store.fullAddress || store.address}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <FaPhoneAlt className="w-5 h-5 text-green-deep shrink-0" />
+              <div className="flex items-start gap-3">
+                <FaPhoneAlt className="w-5 h-5 text-green-deep shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-base">Phone</h4>
-                  <a
-                    href={`tel:${store.phone.replace(/\s+/g, '')}`}
-                    className="text-text-muted text-sm hover:text-green-deep transition-colors font-mono"
-                  >
-                    {store.phone}
-                  </a>
+                  {store.contacts ? (
+                    <div className="space-y-1 pt-0.5">
+                      {store.contacts.map((c, idx) => (
+                        <p key={idx} className="text-text-muted text-sm leading-relaxed">
+                          <span className="font-sans font-medium text-text-dark">{c.name} &mdash; </span>
+                          <a
+                            href={`tel:${c.phone.replace(/\s+/g, '')}`}
+                            className="hover:text-green-deep transition-colors font-mono"
+                          >
+                            {c.phone}
+                          </a>
+                        </p>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-text-muted text-sm leading-relaxed pt-0.5">
+                      {store.contactName && (
+                        <span className="font-sans font-medium text-text-dark">{store.contactName} &mdash; </span>
+                      )}
+                      <a
+                        href={`tel:${store.phone.replace(/\s+/g, '')}`}
+                        className="hover:text-green-deep transition-colors font-mono"
+                      >
+                        {store.phone}
+                      </a>
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
