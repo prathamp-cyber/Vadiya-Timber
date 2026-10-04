@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import OurWork from './pages/OurWork';
 import StoreDetail from './pages/StoreDetail';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(() => {
@@ -50,6 +51,7 @@ export default function App() {
               <Route path="/our-work" element={<OurWork />} />
               <Route path="/store/:storeId" element={<StoreDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

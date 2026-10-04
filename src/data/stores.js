@@ -52,7 +52,7 @@ export const stores = [
     phone: "+91 91063 35110",
     contacts: [
       { name: "Ashwin Vadiya", phone: "+91 91063 35110" },
-      { name: "Nillesh Patel", phone: "+91 74118 82012" }
+      { name: "Raj Vadiya", phone: "+91 81607 47546" }
     ],
     tagline: "Architectural & Hardwood Showroom",
     description: "Serving Bangalore's architects, interior designers, and luxury builders with handpicked Burmese teak, Honne, and engineered wood planks.",

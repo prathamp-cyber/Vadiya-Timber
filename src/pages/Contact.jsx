@@ -70,7 +70,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log('Contact Form Data Submitted:', formData);
       setSubmitted(true);
     }
   };

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
+import logoIcon from '../assets/logo/vadiya-impex-icon-transparent.png';
 
 export const revealItemVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -61,16 +62,23 @@ export default function Navbar() {
         }`}
     >
       <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Left: Brand Logo Text & GST */}
-        <Link to="/" className="flex flex-col text-left group">
+        {/* Left: Brand Logo Icon + Text & GST */}
+        <Link to="/" className="flex flex-col text-left group justify-center py-1">
+          <div className="flex items-center gap-2.5">
+            <img
+              src={logoIcon}
+              alt="Vadiya Impex"
+              className="h-[36px] md:h-[42px] w-auto object-contain shrink-0"
+            />
+            <span
+              className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-brown-walnut'
+                }`}
+            >
+              Vadiya Impex
+            </span>
+          </div>
           <span
-            className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-brown-walnut'
-              }`}
-          >
-            Vadiya Impex
-          </span>
-          <span
-            className={`font-body text-[11px] sm:text-xs font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 ${isTransparent ? 'text-white/80' : 'text-text-muted'
+            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 ${isTransparent ? 'text-white/80' : 'text-text-muted'
               }`}
             style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
           >

@@ -172,11 +172,10 @@ export default function OurWork() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`text-xs sm:text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? 'bg-green-deep text-white shadow-sm'
-                    : 'bg-white border border-neutral-200 text-text-dark hover:border-neutral-300 hover:text-brown-walnut'
-                }`}
+                className={`text-xs sm:text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer ${isActive
+                  ? 'bg-green-deep text-white shadow-sm'
+                  : 'bg-white border border-neutral-200 text-text-dark hover:border-neutral-300 hover:text-brown-walnut'
+                  }`}
                 style={isActive ? { backgroundColor: '#2F4A2B' } : {}}
               >
                 {cat}
@@ -337,7 +336,7 @@ export default function OurWork() {
 
           <div className="space-y-1">
             <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
-              10+ Years
+              Years
             </h3>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Unrivaled Mastery in Teak Import & Sizing
