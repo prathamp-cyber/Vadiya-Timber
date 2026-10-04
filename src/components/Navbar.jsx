@@ -63,27 +63,27 @@ export default function Navbar() {
     >
       <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
         {/* Left: Brand Logo Icon + Text & GST */}
-        <Link to="/" className="flex flex-col group justify-center py-1">
-          <div className="flex items-center gap-2.5">
-            <img
-              src={logoIcon}
-              alt="Vadiya Impex"
-              className="h-[36px] md:h-[42px] w-auto object-contain shrink-0"
-            />
+        <Link to="/" className="flex items-center gap-2.5 text-left group justify-center py-1">
+          <img
+            src={logoIcon}
+            alt="Vadiya Impex"
+            className="h-[36px] md:h-[42px] w-auto object-contain shrink-0"
+          />
+          <div className="flex flex-col text-left">
             <span
               className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-brown-walnut'
                 }`}
             >
               Vadiya Impex
             </span>
+            <span
+              className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 ${isTransparent ? 'text-white/80' : 'text-text-muted'
+                }`}
+              style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
+            >
+              GST No. 24AASFV6101B1ZF
+            </span>
           </div>
-          <span
-            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 pl-12 md:pl-14 text-left ${isTransparent ? 'text-white/80' : 'text-text-muted'
-              }`}
-            style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
-          >
-            GST No. 24AASFV6101B1ZF
-          </span>
         </Link>
 
         {/* Right: Desktop Navigation Links */}

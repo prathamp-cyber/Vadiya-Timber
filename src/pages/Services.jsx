@@ -99,7 +99,7 @@ export default function Services() {
     },
     {
       icon: FaBuilding,
-      title: "3 Locations, One Standard",
+      title: "4 Locations, One Standard",
       description: "Seamless quality control across our Kandla port hub in Gandhidham and Bangalore experience centers."
     }
   ];
@@ -141,9 +141,8 @@ export default function Services() {
               <motion.div
                 key={service.id}
                 {...fadeInVariant}
-                className={`flex flex-col md:flex-row items-center gap-10 md:gap-16 ${
-                  isEven ? 'md:flex-row-reverse' : ''
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-10 md:gap-16 ${isEven ? 'md:flex-row-reverse' : ''
+                  }`}
               >
                 {/* Image Side */}
                 <div className="w-full md:w-1/2 aspect-16/10 rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-xs">
