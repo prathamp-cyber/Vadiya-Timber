@@ -31,6 +31,7 @@ export default function Contact() {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [emailTooltip, setEmailTooltip] = useState(false);
 
   const validate = () => {
     const newErrors = {};
@@ -446,16 +447,28 @@ export default function Contact() {
                   <div className="w-9 h-9 rounded-lg bg-white border border-neutral-200 text-green-deep flex items-center justify-center shrink-0 shadow-2xs">
                     <FaEnvelope className="w-4 h-4 text-green-deep" />
                   </div>
-                  <div>
+                  <div className="relative">
                     <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
                       Email Us
                     </span>
-                    <a
-                      href="mailto:contact@vadiyatimbers.com"
-                      className="font-medium text-text-dark hover:text-green-deep transition-colors text-sm"
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setEmailTooltip(true);
+                        setTimeout(() => setEmailTooltip(false), 2500);
+                      }}
+                      title="Email coming soon"
+                      aria-label="Email coming soon"
+                      className="font-medium text-text-dark hover:text-green-deep transition-colors text-sm text-left cursor-pointer"
                     >
                       contact@vadiyatimbers.com
-                    </a>
+                    </button>
+                    {emailTooltip && (
+                      <div className="absolute left-0 top-full mt-1 px-2.5 py-1 text-xs font-medium text-white bg-black/90 rounded shadow-md whitespace-nowrap z-50 pointer-events-none">
+                        Email coming soon
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -472,9 +485,9 @@ export default function Contact() {
                       <div className="font-medium text-text-dark text-sm flex items-center gap-1 flex-wrap">
                         <span className="font-sans font-semibold text-emerald-800">Ashwin Vadiya &mdash; </span>
                         <a
-                          href="https://wa.me/919106335110?text=Hello%20Vadiya%20Impex%2C%20I%20would%20like%20to%20inquire%20about..."
+                          href="https://wa.me/919106335110?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20Vadiya%20Impex%27s%20timber%20services."
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="font-mono font-semibold text-emerald-700 hover:text-emerald-800 hover:underline transition-colors flex items-center gap-1"
                         >
                           <span>+91 91063 35110</span>
@@ -484,9 +497,9 @@ export default function Contact() {
                       <div className="font-medium text-text-dark text-sm flex items-center gap-1 flex-wrap">
                         <span className="font-sans font-semibold text-emerald-800">Raj Vadiya &mdash; </span>
                         <a
-                          href="https://wa.me/918160747546?text=Hello%20Vadiya%20Impex%2C%20I%20would%20like%20to%20inquire%20about..."
+                          href="https://wa.me/918160747546?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20Vadiya%20Impex%27s%20timber%20services."
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="font-mono font-semibold text-emerald-700 hover:text-emerald-800 hover:underline transition-colors flex items-center gap-1"
                         >
                           <span>+91 81607 47546</span>

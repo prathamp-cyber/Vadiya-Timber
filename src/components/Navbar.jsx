@@ -61,13 +61,20 @@ export default function Navbar() {
         }`}
     >
       <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Left: Brand Logo Text */}
-        <Link to="/" className="flex items-center gap-3 group">
+        {/* Left: Brand Logo Text & GST */}
+        <Link to="/" className="flex flex-col text-left group">
           <span
             className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-brown-walnut'
               }`}
           >
             Vadiya Impex
+          </span>
+          <span
+            className={`font-body text-[11px] sm:text-xs font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 ${isTransparent ? 'text-white/80' : 'text-text-muted'
+              }`}
+            style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
+          >
+            GST No. 24AASFV6101B1ZF
           </span>
         </Link>
 

@@ -39,40 +39,16 @@ export default function Home() {
 
   const timberSpecies = [
     {
-      id: "burmese-teak",
-      name: "Burmese Teak",
+      id: "burma-border",
+      name: "Burma Border",
       image: "/images/gallery-4.jpg",
       note: "Prized for exceptional natural oils, rich golden grain, and unmatched weather resistance."
     },
     {
-      id: "honne",
-      name: "Honne (Merbau)",
+      id: "teak-wood",
+      name: "Teak wood",
       image: "/images/gallery-2.jpg",
       note: "Renowned for high structural density, deep reddish-brown tones, and termite resistance."
-    },
-    {
-      id: "sal-wood",
-      name: "Sal Wood",
-      image: "/images/gallery-1.jpg",
-      note: "Heavy-duty structural hardwood ideal for heavy beams, door frames, and outdoor construction."
-    },
-    {
-      id: "pine-wood",
-      name: "Imported Softwood & Pine",
-      image: "/images/gallery-5.jpg",
-      note: "Uniform, lightweight timber ideal for interior joinery, framework, and packaging."
-    },
-    {
-      id: "sheesham",
-      name: "Rosewood (Sheesham)",
-      image: "/images/gallery-3.jpg",
-      note: "Exotic dark-grained hardwood crafted for luxury heirloom furniture and decorative panels."
-    },
-    {
-      id: "architectural-decking",
-      name: "Engineered Decking Planks",
-      image: "/images/project-decking.jpg",
-      note: "Kiln-seasoned tongue-and-groove planks treated for outdoor pool decks and pergolas."
     }
   ];
 
@@ -91,7 +67,7 @@ export default function Home() {
     },
     {
       id: 3,
-      quote: "The solid teak door frames and customized interior mouldings from their Jayanagar store elevated our entire home renovation. Exceptional timber craftsmanship!",
+      quote: "The solid teak door frames and customized interior mouldings from their Jigni store elevated our entire home renovation. Exceptional timber craftsmanship!",
       client: "Priya Sundaram",
       role: "Interior Designer & Homeowner, Bangalore"
     }
@@ -109,17 +85,6 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* GST Number Header - Left aligned with Navbar Logo */}
-        <div className="w-full max-w-content mx-auto text-left relative z-10 pt-2 sm:pt-4">
-          <motion.div
-            variants={revealItemVariants}
-            className="font-body text-xs sm:text-sm text-white/80 font-medium tracking-wide"
-            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
-          >
-            GST No. 24AASFV6101B1ZF
-          </motion.div>
-        </div>
-
         {/* Center Hero Content */}
         <div className="max-w-4xl mx-auto space-y-6 relative z-10 px-4 py-8 my-auto text-center">
           {/* Item 2 in Reveal Sequence: Hero Headline */}
@@ -185,14 +150,14 @@ export default function Home() {
                 <div className="aspect-16/10 bg-neutral-100 overflow-hidden border-b border-neutral-100">
                   <img
                     src={store.image}
-                    alt={store.id === 'gandhidham' ? 'VADIYA IMPEX' : store.name}
+                    alt={store.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Store Card Content */}
                 <div className="p-6 md:p-8 space-y-3">
                   <h3 className="font-heading text-xl md:text-2xl font-bold text-brown-walnut leading-snug">
-                    {store.id === 'gandhidham' ? 'VADIYA IMPEX' : store.name}
+                    {store.name}
                   </h3>
                   <p className="font-body text-text-muted text-sm leading-relaxed">
                     {store.tagline}
@@ -222,10 +187,10 @@ export default function Home() {
       >
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-brown-walnut">
-            About Vadiya Timber Merchant
+            About Vadiya Impex Merchant
           </h2>
           <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
-            Vadiya Timber Merchant is a premier timber importer and primary processor headquartered in Gandhidham with specialized architectural showrooms in Bangalore. For over 30 years, we have supplied master craftsmen, architects, and builders with certified high-grade teak, hardwoods, and precision-sawn timber. Our unwavering commitment to sustainability, structural integrity, and tailored client service makes us a trusted leader across India.
+            Vadiya Impex Merchant is a premier timber importer and primary processor headquartered in Gandhidham with specialized architectural showrooms in Bangalore. For over 10 years, we have supplied master craftsmen, architects, and builders with certified high-grade teak, hardwoods, and precision-sawn timber. Our unwavering commitment to sustainability, structural integrity, and tailored client service makes us a trusted leader across India.
           </p>
         </div>
       </motion.section>
@@ -302,7 +267,7 @@ export default function Home() {
           </div>
 
           {/* Timber Cards Showcase Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {timberSpecies.map((timber, idx) => (
               <motion.div
                 key={timber.id}
@@ -391,7 +356,7 @@ export default function Home() {
         <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-1">
             <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
-              30+ Years
+              10+ Years
             </h3>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Industry Experience & Legacy

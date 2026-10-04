@@ -193,7 +193,7 @@ export default function Services() {
         <div className="max-w-content mx-auto text-center space-y-12">
           <div className="space-y-3">
             <h2 className="font-heading text-3xl md:text-4xl font-bold">
-              Why Choose Vadiya Timber Merchant
+              Why Choose Vadiya Impex
             </h2>
             <p className="font-body text-white/85 text-base max-w-xl mx-auto">
               Three decades of timber expertise, direct port importing, and uncompromised quality standards.

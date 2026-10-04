@@ -44,16 +44,22 @@ export const stores = [
   },
   {
     id: "bangalore-1",
-    name: "Vadiya Timbers - Bangalore North (Hebbal)",
+    name: "Vadiya Timbers - Bangalore (Anjanapura)",
     city: "Bangalore",
-    address: "No 12/B, Outer Ring Road, Near Hebbal Flyover, Bangalore, Karnataka 560024",
-    phone: "+91 98765 43211",
+    address: "No. 1087, 80 Feet road, 11th Block Anjanapura, Near Nayara Petrol Pump, Bangalore, 560083",
+    fullAddress: "No. 1087, 80 Feet road, 11th Block Anjanapura, Near Nayara Petrol Pump, Bangalore, 560083",
+    contactName: "Ashwin Vadiya",
+    phone: "+91 91063 35110",
+    contacts: [
+      { name: "Ashwin Vadiya", phone: "+91 91063 35110" },
+      { name: "Nillesh Patel", phone: "+91 74118 82012" }
+    ],
     tagline: "Architectural & Hardwood Showroom",
-    description: "Serving North Bangalore's architects, interior designers, and luxury builders with handpicked Burmese teak, Honne, and engineered wood planks.",
+    description: "Serving Bangalore's architects, interior designers, and luxury builders with handpicked Burmese teak, Honne, and engineered wood planks.",
     longDescription: [
-      "Strategically situated along the Outer Ring Road near Hebbal Flyover, our Bangalore North showroom caters to the capital's top architects, luxury residential builders, and commercial space designers. This experience center showcases curated selections of seasoned Burmese Teak, Honne, Sal, and exotic imported hardwoods.",
+      "Strategically situated along 80 Feet Road in Anjanapura, our Bangalore showroom caters to the capital's top architects, luxury residential builders, and commercial space designers. This experience center showcases curated selections of seasoned Burmese Teak, Honne, Sal, and exotic imported hardwoods.",
       "The showroom features full-scale mockups of architectural wood ceiling paneling, floating teak stairs, solid hardwood flooring, and custom acoustic wall cladding. Clients can inspect live wood grain samples, touch natural oil finishes, and work directly with our timber consultants to specify exact dimensions for luxury villas and corporate projects.",
-      "With an integrated staging warehouse attached to the showroom, Hebbal provides rapid site deliveries and cut-to-spec edge profiling services throughout North Bangalore, Yelahanka, and the airport corridor."
+      "With an integrated staging warehouse attached to the showroom, Anjanapura provides rapid site deliveries and cut-to-spec edge profiling services throughout Bangalore and nearby corridors."
     ],
     image: "/images/bangalore-1.jpg",
     images: [
@@ -76,20 +82,26 @@ export const stores = [
       { label: "Premium Veneers", icon: "FaLayerGroup" },
       { label: "On-Site Staging", icon: "FaTruck" }
     ],
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Outer+Ring+Road+Hebbal+Bangalore+Karnataka",
-    embedMapUrl: "https://maps.google.com/maps?q=Hebbal%20Outer%20Ring%20Road%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=11th+Block+Anjanapura+Near+Nayara+Petrol+Pump+Bangalore+560083",
+    embedMapUrl: "https://maps.google.com/maps?q=11th%20Block%20Anjanapura%20Near%20Nayara%20Petrol%20Pump%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
   },
   {
     id: "bangalore-2",
-    name: "Vadiya Timbers - Bangalore South (Jayanagar)",
+    name: "Vadiya Lumbers - Bangalore (Jigani)",
     city: "Bangalore",
-    address: "7th Main, 4th Block, Jayanagar, Bangalore, Karnataka 560011",
+    address: "No.179, S.Bingipura village, Jigni Hobli, Anekal Taluk, Banglore, 560105",
+    fullAddress: "No.179, S.Bingipura village, Jigni Hobli, Anekal Taluk, Banglore, 560105",
+    contactName: "Raj Vadiya",
     phone: "+91 81607 47546",
+    contacts: [
+      { name: "Raj Vadiya", phone: "+91 81607 47546" },
+      { name: "Kailash Patel", phone: "+91 83103 61904" }
+    ],
     tagline: "Retail & Interior Wood Craft Store",
     description: "Specializing in high-grade furniture timber, solid wood doors, and tailored wood cuts for home renovations and bespoke carpentry.",
     longDescription: [
-      "Located in the vibrant heart of Jayanagar 4th Block, our South Bangalore retail store is dedicated to interior wood crafting, home renovation timber, and bespoke carpentry supplies. Designed with an inviting, tactile layout, homeowners and master carpenters can select premium grade wood cuts for custom doors, window frames, and heirloom furniture.",
-      "Our Jayanagar facility maintains an extensive stock of seasoned Teak wood door frames, flush doors, decorative timber beads, and furniture-grade planks ready for immediate pickup or localized delivery across South Bangalore, JP Nagar, and Koramangala.",
+      "Located in Jigani Industrial Area, our Bangalore store is dedicated to interior wood crafting, home renovation timber, and bespoke carpentry supplies. Designed with an inviting, tactile layout, homeowners and master carpenters can select premium grade wood cuts for custom doors, window frames, and heirloom furniture.",
+      "Our Jigani facility maintains an extensive stock of seasoned Teak wood door frames, flush doors, decorative timber beads, and furniture-grade planks ready for immediate pickup or localized delivery across Bangalore, Electronic City, and Anekal.",
       "Our in-store woodcraft specialists provide technical advice on timber selection, oil polishing techniques, moisture content testing, and custom edge chamfering, ensuring every home woodworking project is built to last for generations."
     ],
     image: "/images/bangalore-2.jpg",
@@ -113,7 +125,7 @@ export const stores = [
       { label: "Furniture Grade Wood", icon: "FaCubes" },
       { label: "Polish & Treatment Advice", icon: "FaAward" }
     ],
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=4th+Block+Jayanagar+Bangalore+Karnataka",
-    embedMapUrl: "https://maps.google.com/maps?q=Jayanagar%204th%20Block%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jigani+Industrial+Area+Bangalore+Karnataka",
+    embedMapUrl: "https://maps.google.com/maps?q=Jigani%20Industrial%20Area%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
   }
 ];

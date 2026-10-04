@@ -45,7 +45,7 @@ export default function OurWork() {
       id: 4,
       title: "Corporate Slat Wall & Reception",
       category: "Commercial",
-      location: "Bangalore North",
+      location: "Bangalore (Anjanapura)",
       image: "/images/project-office.jpg",
       aspectRatio: "aspect-16/10",
       description: "Custom teak wood acoustic slat wall cladding and sculpted solid timber reception desk for a tech corporate headquarters."
@@ -63,7 +63,7 @@ export default function OurWork() {
       id: 6,
       title: "Architectural Hardwood Showroom",
       category: "Architectural",
-      location: "Hebbal Showroom",
+      location: "Anjanapura Showroom",
       image: "/images/bangalore-1.jpg",
       aspectRatio: "aspect-3/4",
       description: "A showcase of Burmese teak flooring samples, custom moulding edge profiles, and exotic hardwood wall cladding mockups."
@@ -72,7 +72,7 @@ export default function OurWork() {
       id: 7,
       title: "Bespoke Woodcraft & Solid Door Center",
       category: "Residential",
-      location: "Jayanagar, Bangalore",
+      location: "Jigni, Bangalore",
       image: "/images/bangalore-2.jpg",
       aspectRatio: "aspect-16/10",
       description: "Tailored timber cuts for luxury home renovation, solid entrance doors, and handcrafted wooden furniture displays."
@@ -99,7 +99,7 @@ export default function OurWork() {
       id: 10,
       title: "Exotic Hardwood Veneer & Cladding Display",
       category: "Architectural",
-      location: "Bangalore North",
+      location: "Bangalore (Anjanapura)",
       image: "/images/gallery-3.jpg",
       aspectRatio: "aspect-16/10",
       description: "High-grade decorative wood veneers and architectural timber panel displays for commercial interior design projects."
@@ -117,7 +117,7 @@ export default function OurWork() {
       id: 12,
       title: "Bespoke Furniture Joinery & Wood Cuts",
       category: "Commercial",
-      location: "Bangalore South",
+      location: "Bangalore (Jigni)",
       image: "/images/gallery-5.jpg",
       aspectRatio: "aspect-3/4",
       description: "Finely sanded furniture-grade teak wood planks and joinery cuts for boutique hotel and restaurant interiors."
@@ -337,7 +337,7 @@ export default function OurWork() {
 
           <div className="space-y-1">
             <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
-              30+ Years
+              10+ Years
             </h3>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Unrivaled Mastery in Teak Import & Sizing
