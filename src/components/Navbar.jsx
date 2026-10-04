@@ -78,7 +78,7 @@ export default function Navbar() {
             </span>
           </div>
           <span
-            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 w-full text-center ${isTransparent ? 'text-white/80' : 'text-text-muted'
+            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 pl-12 md:pl-14 text-left ${isTransparent ? 'text-white/80' : 'text-text-muted'
               }`}
             style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
           >

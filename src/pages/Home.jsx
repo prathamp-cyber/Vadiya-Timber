@@ -134,12 +134,12 @@ export default function Home() {
           </h2>
           <div className="w-16 h-[3px] bg-brown-tan mx-auto my-3 rounded-full" style={{ backgroundColor: '#7A5738' }} />
           <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
-            Visit us at any of our three locations across Gandhidham and Bangalore
+            Visit our primary hubs and branch facilities across Gandhidham and Bangalore
           </p>
         </div>
 
         {/* Store Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stores.map((store) => (
             <div
               key={store.id}
@@ -155,25 +155,31 @@ export default function Home() {
                   />
                 </div>
                 {/* Store Card Content */}
-                <div className="p-6 md:p-8 space-y-3">
-                  <h3 className="font-heading text-xl md:text-2xl font-bold text-brown-walnut leading-snug">
+                <div className="p-5 md:p-6 space-y-2">
+                  <h3 className="font-heading text-lg md:text-xl font-bold text-brown-walnut leading-snug">
                     {store.name}
                   </h3>
-                  <p className="font-body text-text-muted text-sm leading-relaxed">
+                  <p className="font-body text-text-muted text-xs sm:text-sm leading-relaxed">
                     {store.tagline}
                   </p>
                 </div>
               </div>
 
               {/* View Details Link */}
-              <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2">
-                <Link
-                  to={`/store/${store.id}`}
-                  className="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-green-deep hover:underline"
-                >
-                  <span>View Details</span>
-                  <FaArrowRight className="text-xs" />
-                </Link>
+              <div className="px-5 md:px-6 pb-5 md:pb-6 pt-2">
+                {store.id === 'vadiya-associates' ? (
+                  <span className="inline-flex items-center gap-1.5 font-body text-xs sm:text-sm font-semibold text-text-muted cursor-default">
+                    <span>Details Coming Soon</span>
+                  </span>
+                ) : (
+                  <Link
+                    to={`/store/${store.id}`}
+                    className="inline-flex items-center gap-1.5 font-body text-xs sm:text-sm font-semibold text-green-deep hover:underline"
+                  >
+                    <span>View Details</span>
+                    <FaArrowRight className="text-xs" />
+                  </Link>
+                )}
               </div>
             </div>
           ))}

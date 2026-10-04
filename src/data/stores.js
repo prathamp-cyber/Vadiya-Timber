@@ -127,5 +127,40 @@ export const stores = [
     ],
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jigani+Industrial+Area+Bangalore+Karnataka",
     embedMapUrl: "https://maps.google.com/maps?q=Jigani%20Industrial%20Area%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    id: "vadiya-associates",
+    name: "Vadiya Associates",
+    city: "Location TBD",
+    address: "Address TBD (Branch details coming soon)",
+    fullAddress: "Address TBD (Branch details coming soon)",
+    contactName: "Contact TBD",
+    phone: "Phone TBD",
+    contacts: [
+      { name: "Contact TBD", phone: "Phone TBD" }
+    ],
+    tagline: "Commercial & Regional Timber Division (Details TBD)",
+    description: "Branch details coming soon. Dedicated timber supply and consulting services for regional commercial and industrial projects.",
+    longDescription: [
+      "Branch details for Vadiya Associates will be published soon.",
+      "Serving our commercial clients with specialized hardwood, timber processing, and architectural wood solutions."
+    ],
+    image: "/images/gallery-1.jpg",
+    images: [
+      "/images/gallery-1.jpg",
+      "/images/gallery-2.jpg",
+      "/images/gallery-3.jpg"
+    ],
+    services: [
+      "Commercial Timber Supply",
+      "Bulk Distribution",
+      "Wood Sizing & Sawing"
+    ],
+    servicesOffered: [
+      { label: "Commercial Supply", icon: "FaTruck" },
+      { label: "Bulk Distribution", icon: "FaCubes" }
+    ],
+    mapsUrl: "https://www.google.com/maps",
+    embedMapUrl: "https://maps.google.com/maps?q=India&t=&z=5&ie=UTF8&iwloc=&output=embed"
   }
 ];
