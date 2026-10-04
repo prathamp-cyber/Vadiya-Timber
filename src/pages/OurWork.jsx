@@ -356,7 +356,7 @@ export default function OurWork() {
             Like what you see?
           </h2>
           <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
-            Partner with Vadiya Timber Merchant for your next architectural, commercial, or residential project.
+            Partner with Vadiya Impex for your next architectural, commercial, or residential project.
           </p>
         </div>
 

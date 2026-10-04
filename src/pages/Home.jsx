@@ -187,10 +187,10 @@ export default function Home() {
       >
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-brown-walnut">
-            About Vadiya Impex Merchant
+            About Vadiya Impex
           </h2>
           <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
-            Vadiya Impex Merchant is a premier timber importer and primary processor headquartered in Gandhidham with specialized architectural showrooms in Bangalore. For over 10 years, we have supplied master craftsmen, architects, and builders with certified high-grade teak, hardwoods, and precision-sawn timber. Our unwavering commitment to sustainability, structural integrity, and tailored client service makes us a trusted leader across India.
+            Vadiya Impex is a premier timber importer and primary processor headquartered in Gandhidham with specialized architectural showrooms in Bangalore. For over 10 years, we have supplied master craftsmen, architects, and builders with certified high-grade teak, hardwoods, and precision-sawn timber. Our unwavering commitment to sustainability, structural integrity, and tailored client service makes us a trusted leader across India.
           </p>
         </div>
       </motion.section>
