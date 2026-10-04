@@ -63,7 +63,7 @@ export default function Navbar() {
     >
       <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
         {/* Left: Brand Logo Icon + Text & GST */}
-        <Link to="/" className="flex flex-col text-left group justify-center py-1">
+        <Link to="/" className="flex flex-col group justify-center py-1">
           <div className="flex items-center gap-2.5">
             <img
               src={logoIcon}
@@ -78,7 +78,7 @@ export default function Navbar() {
             </span>
           </div>
           <span
-            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 ${isTransparent ? 'text-white/80' : 'text-text-muted'
+            className={`font-body text-[10px] sm:text-[11px] font-medium tracking-wide transition-colors duration-300 leading-tight pt-0.5 w-full text-center ${isTransparent ? 'text-white/80' : 'text-text-muted'
               }`}
             style={isTransparent ? { textShadow: '0 1px 4px rgba(0,0,0,0.5)' } : {}}
           >
