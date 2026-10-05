@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logoIcon from '../assets/logo/vadiya-impex-icon-transparent.png';
+import logoIcon from '../assets/logo/vadiya-impex-icon-transparent.webp';
 
 export const revealItemVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -67,8 +67,8 @@ export default function Navbar() {
           <img
             src={logoIcon}
             alt="Vadiya Impex"
-            width={42}
-            height={42}
+            width={49}
+            height={63}
             className="h-[36px] md:h-[42px] w-auto object-contain shrink-0"
           />
           <div className="flex flex-col text-left">

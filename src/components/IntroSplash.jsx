@@ -18,14 +18,14 @@ export default function IntroSplash({ onComplete }) {
     document.body.style.overflow = 'hidden';
 
     // Timing breakdown:
-    // 0ms - 1700ms: Letter-by-letter stagger reveal (85ms per character)
-    // 1700ms - 2600ms: Pristine hold state (~900ms hold)
-    // 2600ms: Trigger exit animation (600ms exit transition)
-    // Total duration from load to complete unmount: ~3.2 seconds
+    // 0ms - 720ms: Letter-by-letter stagger reveal (60ms per character)
+    // 850ms - 1650ms: Elegantly balanced hold state
+    // 1650ms: Trigger exit animation (450ms exit transition)
+    // Total splash duration: ~2.1 seconds
     const holdTimer = setTimeout(() => {
       setIsVisible(false);
       sessionStorage.setItem('vadiya_splash_shown', 'true');
-    }, 2600);
+    }, 1650);
 
     return () => {
       clearTimeout(holdTimer);
@@ -49,9 +49,9 @@ export default function IntroSplash({ onComplete }) {
     animate: { opacity: 1, scale: 1 },
     exit: {
       opacity: 0,
-      scale: 1.04,
+      scale: 1.02,
       transition: {
-        duration: 0.6,
+        duration: 0.45,
         ease: [0.4, 0, 0.2, 1], // Custom smooth easeInOut curve
       },
     },
@@ -62,33 +62,33 @@ export default function IntroSplash({ onComplete }) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.085, // Slower 85ms delay between letters for deliberate readability
-        delayChildren: 0.15,
+        staggerChildren: 0.06, // Smooth 60ms delay between letters
+        delayChildren: 0.1,
       },
     },
   };
 
   const letterVariants = {
-    hidden: { opacity: 0, y: 16, scale: 0.94 },
+    hidden: { opacity: 0, y: 12, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.45,
+        duration: 0.35,
         ease: 'easeOut',
       },
     },
   };
 
   const subtitleVariants = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: 8 },
     visible: {
       opacity: 0.85,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: 1.4,
+        duration: 0.4,
+        delay: 0.85,
         ease: 'easeOut',
       },
     },
@@ -100,8 +100,8 @@ export default function IntroSplash({ onComplete }) {
       scaleX: 1,
       opacity: 1,
       transition: {
-        duration: 0.6,
-        delay: 1.3,
+        duration: 0.45,
+        delay: 0.8,
         ease: 'easeOut',
       },
     },

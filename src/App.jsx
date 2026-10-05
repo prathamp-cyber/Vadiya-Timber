@@ -23,8 +23,8 @@ export default function App() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.18, // 180ms delay between elements: Navbar -> Headline -> Subtext -> Button
-        delayChildren: 0.05,
+        staggerChildren: 0.10, // 100ms delay between elements: Navbar -> Headline -> Subtext -> Button
+        delayChildren: 0.02,
       },
     },
   };
