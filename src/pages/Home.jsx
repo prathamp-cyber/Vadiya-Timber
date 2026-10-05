@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { stores } from '../data/stores';
-import { FaArrowRight, FaQuoteLeft } from 'react-icons/fa';
+import { FaArrowRight, FaQuoteLeft, FaMapMarkerAlt, FaQuestionCircle } from 'react-icons/fa';
 import { revealItemVariants } from '../components/Navbar';
 
 export default function Home() {
@@ -73,12 +73,49 @@ export default function Home() {
     }
   ];
 
+  const faqs = [
+    {
+      q: "Who are the best timber merchants in Gandhidham?",
+      a: "Vadiya Impex is a premier timber merchant and direct wood importer headquartered near Kandla Port in Gandhidham, Kutch, Gujarat. We supply certified Burmese teak, hardwoods, and sal timber, offering precision saw milling, kiln thermal seasoning, and bulk transport across India."
+    },
+    {
+      q: "Does Vadiya Impex supply timber in Bangalore?",
+      a: "Yes, Vadiya Impex operates two dedicated branch facilities in Bangalore — an architectural hardwood showroom in Anjanapura and a retail interior woodcraft store in Jigani — serving architects, builders, and homeowners across Hebbal, Jayanagar, Electronic City, and Karnataka."
+    },
+    {
+      q: "What types of timber does Vadiya Impex import and process?",
+      a: "We specialize in importing high-grade Burmese Teak, Red Sal, Honne, Panama Teak, and imported structural hardwoods harvested from certified sustainable global forest concessions."
+    },
+    {
+      q: "Do you provide custom log sawing, sizing, and kiln drying?",
+      a: "Yes, our flagship Gandhidham hub is equipped with heavy-duty horizontal band sawmills and automated thermal seasoning kilns to deliver custom-dimensioned timber planks, beams, and anti-termite treated wood."
+    },
+    {
+      q: "How can I request a bulk timber quote or arrange site delivery?",
+      a: "You can request a custom quote online via our Contact page or call our direct branch managers in Gandhidham (+91 91063 35110) or Bangalore (+91 81607 47546). We organize direct truck transport to job sites nationwide."
+    }
+  ];
+
   return (
     <div className="w-full bg-white text-text-dark">
       <Helmet>
-        <title>Vadiya Impex | Premium Timber Import & Export - Gandhidham & Bangalore</title>
-        <meta name="description" content="Leading timber merchant & importer in Gandhidham and Bangalore. Premium teak, hardwood, custom log sawing, kiln drying, and architectural timber supply." />
+        <title>Vadiya Impex | Best Timber Merchants in Gandhidham & Bangalore</title>
+        <meta name="description" content="Vadiya Impex is a trusted timber merchant & importer serving Gandhidham, Kutch, Gujarat & Bangalore. Premium Burmese teak, hardwoods, custom log sawing & kiln drying." />
         <link rel="canonical" href="https://vadiyaimpex.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.q,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+              }
+            }))
+          })}
+        </script>
       </Helmet>
 
       {/* 1. HERO BANNER SECTION (Static background image, static container) */}
@@ -206,7 +243,7 @@ export default function Home() {
             About Vadiya Impex
           </h2>
           <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
-            Vadiya Impex is a premier timber importer and primary processor headquartered in Gandhidham with specialized architectural showrooms in Bangalore. For over years, we have supplied master craftsmen, architects, and builders with certified high-grade teak, hardwoods, and precision-sawn timber. Our unwavering commitment to sustainability, structural integrity, and tailored client service makes us a trusted leader across India.
+            Vadiya Impex is a premier timber merchant and wood importer headquartered near Kandla Port in Gandhidham, Kutch, Gujarat, with specialized architectural showrooms in Bangalore. For over decades, we have supplied architects, luxury builders, and master craftsmen with certified high-grade Burmese teak, hardwoods, and precision-sawn timber. Serving Gandhidham, Kutch, Gujarat, and Bangalore's Anjanapura, Hebbal, Jayanagar, and Jigani regions, our commitment to structural integrity and tailored service makes us a trusted leader across India.
           </p>
         </div>
       </motion.section>
@@ -452,6 +489,85 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </motion.section>
+
+      {/* 9. REGIONS & AREAS WE SERVE SECTION */}
+      <motion.section
+        {...fadeInVariant}
+        className="bg-background-secondary py-16 md:py-24 px-6 border-t border-b border-neutral-200"
+      >
+        <div className="max-w-content mx-auto space-y-10">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-brown-walnut">
+              Regions & Areas We Serve
+            </h2>
+            <div className="w-16 h-[3px] bg-brown-tan mx-auto my-3 rounded-full" style={{ backgroundColor: '#7A5738' }} />
+            <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
+              Proudly serving timber and hardwood needs across Gandhidham, Kutch, and Bangalore's Hebbal, Jayanagar, Electronic City, and Jigani regions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Region 1: Gujarat / Gandhidham */}
+            <div className="bg-white border border-neutral-200 rounded-xl p-8 space-y-4 shadow-xs">
+              <div className="flex items-center gap-3 text-green-deep">
+                <FaMapMarkerAlt className="text-xl" />
+                <h3 className="font-heading text-xl font-bold text-brown-walnut">
+                  Gandhidham & Kutch, Gujarat
+                </h3>
+              </div>
+              <p className="font-body text-text-muted text-sm leading-relaxed">
+                Headquartered near Kandla maritime port, our Gandhidham flagship hub provides primary timber log importing, heavy band saw milling, thermal kiln seasoning, and bulk wholesale distribution across Gandhidham, Kutch, Ahmedabad, Rajkot, Surat, and Gujarat.
+              </p>
+            </div>
+
+            {/* Region 2: Karnataka / Bangalore */}
+            <div className="bg-white border border-neutral-200 rounded-xl p-8 space-y-4 shadow-xs">
+              <div className="flex items-center gap-3 text-green-deep">
+                <FaMapMarkerAlt className="text-xl" />
+                <h3 className="font-heading text-xl font-bold text-brown-walnut">
+                  Bangalore & Karnataka Region
+                </h3>
+              </div>
+              <p className="font-body text-text-muted text-sm leading-relaxed">
+                Our twin experience centers in Anjanapura and Jigani serve luxury residential builders, architects, and master carpenters across Bangalore's key neighborhoods including Hebbal, Jayanagar, Indiranagar, Electronic City, Anekal, and Karnataka.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* 10. FREQUENTLY ASKED QUESTIONS (FAQ) */}
+      <motion.section
+        {...fadeInVariant}
+        className="bg-white py-16 md:py-24 px-6 max-w-content mx-auto"
+      >
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-brown-walnut">
+            Frequently Asked Questions
+          </h2>
+          <div className="w-16 h-[3px] bg-brown-tan mx-auto my-3 rounded-full" style={{ backgroundColor: '#7A5738' }} />
+          <p className="font-body text-text-muted text-base md:text-lg leading-relaxed">
+            Common questions regarding timber merchants, log imports, locations, and custom saw milling
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 space-y-2 shadow-xs"
+            >
+              <h3 className="font-heading text-lg sm:text-xl font-bold text-brown-walnut flex items-start gap-3">
+                <FaQuestionCircle className="text-green-deep shrink-0 mt-1 text-base" />
+                <span>{faq.q}</span>
+              </h3>
+              <p className="font-body text-text-muted text-sm sm:text-base leading-relaxed pl-7">
+                {faq.a}
+              </p>
+            </div>
+          ))}
         </div>
       </motion.section>
     </div>

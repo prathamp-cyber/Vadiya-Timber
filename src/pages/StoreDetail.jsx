@@ -38,7 +38,19 @@ export default function StoreDetail() {
     transition: { duration: 0.4, ease: 'easeOut' }
   };
 
-  const storeMetaDesc = `${store.description} Visit our ${store.city} branch or contact ${store.contactName || 'our team'} at ${store.phone} for quotes.`;
+  let metaTitle = `${store.name} | Vadiya Impex`;
+  let metaDesc = `${store.description} Visit our ${store.city} timber branch or contact ${store.contactName || 'our team'} for quotes.`;
+
+  if (store.id === 'gandhidham') {
+    metaTitle = `${store.name} | Best Timber Merchant in Gandhidham, Kutch, Gujarat`;
+    metaDesc = `Premier timber merchant and importer in Gandhidham, Kutch, Gujarat near Kandla Port. Certified Burmese teak, hardwoods, custom log sawing, kiln drying & wholesale timber supply.`;
+  } else if (store.id === 'bangalore-1') {
+    metaTitle = `${store.name} | Architectural Timber Suppliers Bangalore`;
+    metaDesc = `Leading architectural timber suppliers in Anjanapura, Hebbal, Jayanagar & Bangalore. Premium Burmese teak, Honne, engineered wood planks & custom mouldings.`;
+  } else if (store.id === 'bangalore-2') {
+    metaTitle = `${store.name} | Retail Timber Merchants Bangalore`;
+    metaDesc = `Top retail timber store in Jigani, Electronic City, Anekal & Bangalore. Seasoned teak door frames, solid wooden doors, interior timber cuts & bespoke carpentry wood.`;
+  }
 
   return (
     <motion.div
@@ -49,8 +61,8 @@ export default function StoreDetail() {
       className="w-full bg-white text-text-dark"
     >
       <Helmet>
-        <title>{`${store.name} | Vadiya Impex`}</title>
-        <meta name="description" content={storeMetaDesc.slice(0, 160)} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
         <link rel="canonical" href={`https://vadiyaimpex.com/store/${store.id}`} />
       </Helmet>
 
