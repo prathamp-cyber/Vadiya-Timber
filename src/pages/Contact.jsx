@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { stores } from '../data/stores';
 import Button from '../components/Button';
 import {
@@ -99,6 +100,12 @@ export default function Contact() {
       transition={{ duration: 0.3 }}
       className="w-full bg-white text-text-dark"
     >
+      <Helmet>
+        <title>Contact Us | Vadiya Impex Timber Merchants</title>
+        <meta name="description" content="Contact Vadiya Impex for timber quotes, bulk log orders, saw milling inquiries, or visit our branches in Gandhidham and Bangalore." />
+        <link rel="canonical" href="https://vadiyaimpex.com/contact" />
+      </Helmet>
+
       {/* 1. PAGE HERO (Compact ~30vh height, background-secondary #FAF8F5, same style as Services/Our Work hero) */}
       <section className="bg-background-secondary py-16 md:py-20 px-6 border-b border-neutral-100 flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl mx-auto space-y-3">

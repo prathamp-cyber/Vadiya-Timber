@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { stores } from '../data/stores';
 import {
   FaRulerCombined, FaTree, FaFire, FaTruck, FaCompass,
@@ -37,6 +38,8 @@ export default function StoreDetail() {
     transition: { duration: 0.4, ease: 'easeOut' }
   };
 
+  const storeMetaDesc = `${store.description} Visit our ${store.city} branch or contact ${store.contactName || 'our team'} at ${store.phone} for quotes.`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -45,6 +48,12 @@ export default function StoreDetail() {
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className="w-full bg-white text-text-dark"
     >
+      <Helmet>
+        <title>{`${store.name} | Vadiya Impex`}</title>
+        <meta name="description" content={storeMetaDesc.slice(0, 160)} />
+        <link rel="canonical" href={`https://vadiyaimpex.com/store/${store.id}`} />
+      </Helmet>
+
       {/* 1. STORE HERO BANNER (50vh height, dark overlay, overlaid breadcrumbs & store name) */}
       <section
         className="-mt-20 relative w-full h-[50vh] min-h-[360px] md:min-h-[420px] flex items-center justify-center text-center px-6 pt-20"
@@ -235,7 +244,7 @@ export default function StoreDetail() {
               <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-green-deep shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-base">Address</h4>
+                  <h3 className="font-semibold text-base">Address</h3>
                   <p className="text-text-muted text-sm leading-relaxed">{store.fullAddress || store.address}</p>
                 </div>
               </div>
@@ -243,7 +252,7 @@ export default function StoreDetail() {
               <div className="flex items-start gap-3">
                 <FaPhoneAlt className="w-5 h-5 text-green-deep shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-base">Phone</h4>
+                  <h3 className="font-semibold text-base">Phone</h3>
                   {store.contacts ? (
                     <div className="space-y-1 pt-0.5">
                       {store.contacts.map((c, idx) => (

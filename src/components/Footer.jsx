@@ -14,9 +14,9 @@ export default function Footer() {
         {/* Column 1: Business Name + Tagline */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <h3 className="font-heading text-2xl font-bold text-white">
+            <span className="font-heading text-2xl font-bold text-white">
               Vadiya Impex
-            </h3>
+            </span>
           </div>
           <p className="font-body text-white/80 text-sm leading-relaxed max-w-sm">
             Crafting Trust & Excellence in Quality Timber across Gandhidham and Bangalore for over decades.
@@ -54,9 +54,9 @@ export default function Footer() {
 
         {/* Column 2: All 3 Store Addresses */}
         <div className="space-y-4">
-          <h4 className="font-heading text-lg font-bold text-white tracking-wide border-b border-white/10 pb-2">
+          <p className="font-heading text-lg font-bold text-white tracking-wide border-b border-white/10 pb-2">
             Our Store Locations
-          </h4>
+          </p>
           <div className="space-y-4 text-sm text-white/85">
             {stores.map((store) => (
               <div key={store.id} className="space-y-1">
@@ -123,9 +123,9 @@ export default function Footer() {
 
         {/* Column 3: Quick Links */}
         <div className="space-y-4">
-          <h4 className="font-heading text-lg font-bold text-white tracking-wide border-b border-white/10 pb-2">
+          <p className="font-heading text-lg font-bold text-white tracking-wide border-b border-white/10 pb-2">
             Quick Navigation
-          </h4>
+          </p>
           <ul className="space-y-2.5 text-sm">
             <li>
               <Link to="/" className="text-white/80 hover:text-green-sage transition-colors duration-200 block">

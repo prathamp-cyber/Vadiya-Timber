@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { FaHome, FaExclamationTriangle } from 'react-icons/fa';
 
@@ -13,6 +14,10 @@ export default function NotFound() {
       transition={{ duration: 0.3 }}
       className="min-h-[65vh] flex items-center justify-center px-6 py-16 bg-white text-text-dark text-center"
     >
+      <Helmet>
+        <title>404 - Page Not Found | Vadiya Impex</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="max-w-md mx-auto space-y-6">
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-amber-50 text-amber-600 mb-2 shadow-xs">
           <FaExclamationTriangle className="text-3xl" />

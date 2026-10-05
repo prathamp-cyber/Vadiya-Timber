@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
   FaCheck, FaAward, FaTruck, FaBuilding, FaArrowRight
 } from 'react-icons/fa';
@@ -106,6 +107,12 @@ export default function Services() {
 
   return (
     <div className="w-full bg-white text-text-dark">
+      <Helmet>
+        <title>Our Services | Vadiya Impex Timber Merchants</title>
+        <meta name="description" content="Comprehensive timber services by Vadiya Impex: direct log imports, precision band saw milling, thermal kiln drying, custom architectural wood profiling, and bulk delivery." />
+        <link rel="canonical" href="https://vadiyaimpex.com/services" />
+      </Helmet>
+
       {/* 1. PAGE HERO (Compact 30vh height, white/background-secondary, no image banner) */}
       <section className="bg-background-secondary py-16 md:py-20 px-6 border-b border-neutral-100 flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl mx-auto space-y-3">
@@ -148,7 +155,7 @@ export default function Services() {
                 <div className="w-full md:w-1/2 aspect-16/10 rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-xs">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - Vadiya Impex service`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>

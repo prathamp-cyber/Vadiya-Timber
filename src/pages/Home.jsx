@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { stores } from '../data/stores';
 import { FaArrowRight, FaQuoteLeft } from 'react-icons/fa';
 import heroBg from '../assets/images/hero-bg.jpg';
@@ -75,6 +76,12 @@ export default function Home() {
 
   return (
     <div className="w-full bg-white text-text-dark">
+      <Helmet>
+        <title>Vadiya Impex | Premium Timber Import & Export - Gandhidham & Bangalore</title>
+        <meta name="description" content="Leading timber merchant & importer in Gandhidham and Bangalore. Premium teak, hardwood, custom log sawing, kiln drying, and architectural timber supply." />
+        <link rel="canonical" href="https://vadiyaimpex.com/" />
+      </Helmet>
+
       {/* 1. HERO BANNER SECTION (Static background image, static container) */}
       <section
         className="-mt-20 relative w-full min-h-screen min-h-[100svh] flex flex-col justify-between px-6 pt-24 md:pt-28 pb-12 text-center"
@@ -150,7 +157,7 @@ export default function Home() {
                 <div className="aspect-16/10 bg-neutral-100 overflow-hidden border-b border-neutral-100">
                   <img
                     src={store.image}
-                    alt={store.name}
+                    alt={`${store.name} - ${store.city} branch facility`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -287,7 +294,7 @@ export default function Home() {
                 <div className="aspect-16/10 overflow-hidden bg-neutral-100 relative">
                   <img
                     src={timber.image}
-                    alt={timber.name}
+                    alt={`${timber.name} - high grade timber`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -359,29 +366,30 @@ export default function Home() {
         className="bg-green-deep text-white py-16 px-6"
         style={{ backgroundColor: '#2F4A2B' }}
       >
+        <h2 className="sr-only">Key Business Statistics</h2>
         <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               Years
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Industry Experience & Legacy
             </p>
           </div>
 
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               3 Locations
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Gandhidham & Bangalore Facilities
             </p>
           </div>
 
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               1,000+ Projects
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Architectural & Commercial Delivery
             </p>
@@ -394,6 +402,7 @@ export default function Home() {
         {...fadeInVariant}
         className="bg-white py-16 md:py-24 px-6 max-w-content mx-auto"
       >
+        <h2 className="sr-only">Explore Timber Services and Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {/* Services Teaser */}
           <div className="bg-white border border-neutral-200 rounded-xl p-8 md:p-10 space-y-4 flex flex-col justify-between shadow-xs">

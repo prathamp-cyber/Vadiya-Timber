@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { FaTimes, FaArrowRight, FaBuilding, FaMapMarkerAlt, FaAward } from 'react-icons/fa';
 
 export default function OurWork() {
@@ -137,6 +138,12 @@ export default function OurWork() {
 
   return (
     <div className="w-full bg-white text-text-dark">
+      <Helmet>
+        <title>Our Projects & Timber Portfolio | Vadiya Impex</title>
+        <meta name="description" content="Explore Vadiya Impex timber project portfolio: luxury teak ceilings, floating staircases, resort decking, corporate slat walls, and log saw milling." />
+        <link rel="canonical" href="https://vadiyaimpex.com/our-work" />
+      </Helmet>
+
       {/* 1. PAGE HERO (Compact ~30vh height, background-secondary #FAF8F5, no image banner) */}
       <section className="bg-background-secondary py-16 md:py-20 px-6 border-b border-neutral-100 flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl mx-auto space-y-3">
@@ -204,7 +211,7 @@ export default function OurWork() {
               {/* Project Image */}
               <img
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} - ${project.location} project`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 absolute inset-0"
               />
 
@@ -256,7 +263,7 @@ export default function OurWork() {
               <div className="md:w-3/5 bg-black flex items-center justify-center overflow-hidden">
                 <img
                   src={selectedProject.image}
-                  alt={selectedProject.title}
+                  alt={`${selectedProject.title} - ${selectedProject.location}`}
                   className="w-full h-full object-contain max-h-[60vh] md:max-h-[80vh]"
                 />
               </div>
@@ -315,29 +322,30 @@ export default function OurWork() {
         className="bg-brown-walnut text-white py-16 px-6"
         style={{ backgroundColor: '#4A2E1A' }}
       >
+        <h2 className="sr-only">Portfolio Statistics</h2>
         <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               150+ Projects
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Luxury Villas, Commercial & Sawmill Contracts
             </p>
           </div>
 
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               2 States Served
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Active Distribution Hubs in Gujarat & Karnataka
             </p>
           </div>
 
           <div className="space-y-1">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+            <p className="font-heading text-4xl md:text-5xl font-bold tracking-tight">
               Years
-            </h3>
+            </p>
             <p className="font-body text-white/85 text-sm md:text-base font-medium">
               Unrivaled Mastery in Teak Import & Sizing
             </p>
