@@ -57,37 +57,37 @@ export default function Footer() {
           <p className="font-heading text-lg font-bold text-white tracking-wide border-b border-white/10 pb-2">
             Our Store Locations
           </p>
-          <div className="space-y-4 text-sm text-white/85">
+          <div className="space-y-4 text-sm text-white/90">
             {stores.map((store) => (
               <div key={store.id} className="space-y-1">
                 {store.id === 'vadiya-associates' ? (
                   <div className="font-semibold text-white flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-green-sage text-xs shrink-0" />
+                    <FaMapMarkerAlt className="text-amber-200 text-xs shrink-0" />
                     <span>{store.name}</span>
                   </div>
                 ) : (
                   <Link
                     to={`/store/${store.id}`}
-                    className="font-semibold text-white hover:text-green-sage flex items-center gap-2 transition-colors"
+                    className="font-semibold text-white hover:text-amber-200 flex items-center gap-2 transition-colors"
                   >
-                    <FaMapMarkerAlt className="text-green-sage text-xs shrink-0" />
+                    <FaMapMarkerAlt className="text-amber-200 text-xs shrink-0" />
                     <span>{store.name}</span>
                   </Link>
                 )}
-                <p className="text-xs text-white/70 pl-5 leading-tight">{store.fullAddress || store.address}</p>
+                <p className="text-xs text-white/90 pl-5 leading-tight">{store.fullAddress || store.address}</p>
                 {store.contacts ? (
                   <div className="space-y-0.5 pt-0.5">
                     {store.contacts.map((c, idx) => (
-                      <p key={idx} className="text-xs text-green-sage pl-5 flex items-center gap-1.5">
-                        <FaPhoneAlt className="text-[10px] shrink-0" />
+                      <p key={idx} className="text-xs text-white/90 pl-5 flex items-center gap-1.5">
+                        <FaPhoneAlt className="text-[10px] text-amber-200 shrink-0" />
                         <span>
-                          <span className="font-sans font-medium text-white/90">{c.name} &mdash; </span>
+                          <span className="font-sans font-medium text-white">{c.name} &mdash; </span>
                           {c.phone.includes('TBD') ? (
-                            <span className="font-mono text-white/70">{c.phone}</span>
+                            <span className="font-mono text-white/90">{c.phone}</span>
                           ) : (
                             <a
                               href={`tel:${c.phone.replace(/[^+\d]/g, '')}`}
-                              className="font-mono hover:underline hover:text-white transition-colors"
+                              className="font-mono hover:underline hover:text-amber-200 transition-colors"
                             >
                               {c.phone}
                             </a>
@@ -97,18 +97,18 @@ export default function Footer() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-xs text-green-sage pl-5 flex items-center gap-1.5 pt-0.5">
-                    <FaPhoneAlt className="text-[10px] shrink-0" />
+                  <p className="text-xs text-white/90 pl-5 flex items-center gap-1.5 pt-0.5">
+                    <FaPhoneAlt className="text-[10px] text-amber-200 shrink-0" />
                     <span>
                       {store.contactName && (
-                        <span className="font-sans font-medium text-white/90">{store.contactName} &mdash; </span>
+                        <span className="font-sans font-medium text-white">{store.contactName} &mdash; </span>
                       )}
                       {store.phone && store.phone.includes('TBD') ? (
-                        <span className="font-mono text-white/70">{store.phone}</span>
+                        <span className="font-mono text-white/90">{store.phone}</span>
                       ) : (
                         <a
                           href={`tel:${store.phone.replace(/[^+\d]/g, '')}`}
-                          className="font-mono hover:underline hover:text-white transition-colors"
+                          className="font-mono hover:underline hover:text-amber-200 transition-colors"
                         >
                           {store.phone}
                         </a>
@@ -128,22 +128,22 @@ export default function Footer() {
           </p>
           <ul className="space-y-2.5 text-sm">
             <li>
-              <Link to="/" className="text-white/80 hover:text-green-sage transition-colors duration-200 block">
+              <Link to="/" className="text-white/90 hover:text-amber-200 transition-colors duration-200 block">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/services" className="text-white/80 hover:text-green-sage transition-colors duration-200 block">
+              <Link to="/services" className="text-white/90 hover:text-amber-200 transition-colors duration-200 block">
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/our-work" className="text-white/80 hover:text-green-sage transition-colors duration-200 block">
+              <Link to="/our-work" className="text-white/90 hover:text-amber-200 transition-colors duration-200 block">
                 Our Work
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="text-white/80 hover:text-green-sage transition-colors duration-200 block">
+              <Link to="/contact" className="text-white/90 hover:text-amber-200 transition-colors duration-200 block">
                 Contact Us
               </Link>
             </li>

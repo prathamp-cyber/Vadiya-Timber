@@ -18,14 +18,14 @@ export const stores = [
       "Equipped with heavy-duty horizontal and vertical machinery, the Gandhidham hub provides custom dimension sawing for major structural contracts, marine timber projects, and wholesale distributors across the region. Our experienced sawyers inspect every log to ensure optimal grain alignment and minimal timber wastage.",
       "All logs undergo scientific pressure treatment and controlled kiln seasoning on site to eliminate internal moisture and ensure long-term resistance against fungal decay and termites, making this location the powerhouse of our nationwide timber supply chain."
     ],
-    image: "/images/gandhidham.jpg",
+    image: "/images/gandhidham.webp",
     images: [
-      "/images/gandhidham.jpg",
-      "/images/gallery-1.jpg",
-      "/images/gallery-2.jpg",
-      "/images/gallery-3.jpg",
-      "/images/gallery-4.jpg",
-      "/images/gallery-5.jpg"
+      "/images/gandhidham.webp",
+      "/images/gallery-1.webp",
+      "/images/gallery-2.webp",
+      "/images/gallery-3.webp",
+      "/images/gallery-4.webp",
+      "/images/gallery-5.webp"
     ],
     services: [
       "Custom Sawing & Sizing",
@@ -61,14 +61,14 @@ export const stores = [
       "The showroom features full-scale mockups of architectural wood ceiling paneling, floating teak stairs, solid hardwood flooring, and custom acoustic wall cladding. Clients can inspect live wood grain samples, touch natural oil finishes, and work directly with our timber consultants to specify exact dimensions for luxury villas and corporate projects.",
       "With an integrated staging warehouse attached to the showroom, Anjanapura provides rapid site deliveries and cut-to-spec edge profiling services throughout Bangalore and nearby corridors."
     ],
-    image: "/images/bangalore-1.jpg",
+    image: "/images/bangalore-1.webp",
     images: [
-      "/images/bangalore-1.jpg",
-      "/images/gallery-3.jpg",
-      "/images/gallery-4.jpg",
-      "/images/project-residence.jpg",
-      "/images/project-staircase.jpg",
-      "/images/gallery-2.jpg"
+      "/images/bangalore-1.webp",
+      "/images/gallery-3.webp",
+      "/images/gallery-4.webp",
+      "/images/project-residence.webp",
+      "/images/project-staircase.webp",
+      "/images/gallery-2.webp"
     ],
     services: [
       "Architectural Wood Selection",
@@ -104,14 +104,14 @@ export const stores = [
       "Our Jigani facility maintains an extensive stock of seasoned Teak wood door frames, flush doors, decorative timber beads, and furniture-grade planks ready for immediate pickup or localized delivery across Bangalore, Electronic City, and Anekal.",
       "Our in-store woodcraft specialists provide technical advice on timber selection, oil polishing techniques, moisture content testing, and custom edge chamfering, ensuring every home woodworking project is built to last for generations."
     ],
-    image: "/images/bangalore-2.jpg",
+    image: "/images/bangalore-2.webp",
     images: [
-      "/images/bangalore-2.jpg",
-      "/images/gallery-4.jpg",
-      "/images/gallery-5.jpg",
-      "/images/gallery-3.jpg",
-      "/images/gallery-1.jpg",
-      "/images/project-staircase.jpg"
+      "/images/bangalore-2.webp",
+      "/images/gallery-4.webp",
+      "/images/gallery-5.webp",
+      "/images/gallery-3.webp",
+      "/images/gallery-1.webp",
+      "/images/project-staircase.webp"
     ],
     services: [
       "Retail Timber Sales",
@@ -145,11 +145,11 @@ export const stores = [
       "Branch details for Vadiya Associates will be published soon.",
       "Serving our commercial clients with specialized hardwood, timber processing, and architectural wood solutions."
     ],
-    image: "/images/gallery-1.jpg",
+    image: "/images/gallery-1.webp",
     images: [
-      "/images/gallery-1.jpg",
-      "/images/gallery-2.jpg",
-      "/images/gallery-3.jpg"
+      "/images/gallery-1.webp",
+      "/images/gallery-2.webp",
+      "/images/gallery-3.webp"
     ],
     services: [
       "Commercial Timber Supply",

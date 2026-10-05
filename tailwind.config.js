@@ -27,7 +27,7 @@ export default {
         },
         text: {
           dark: '#2B2B2B',
-          muted: '#6B6B6B',
+          muted: '#545454',
         }
       },
       fontFamily: {

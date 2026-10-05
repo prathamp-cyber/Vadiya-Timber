@@ -67,6 +67,8 @@ export default function Navbar() {
           <img
             src={logoIcon}
             alt="Vadiya Impex"
+            width={42}
+            height={42}
             className="h-[36px] md:h-[42px] w-auto object-contain shrink-0"
           />
           <div className="flex flex-col text-left">

@@ -145,6 +145,10 @@ export default function StoreDetail() {
               <img
                 src={img}
                 alt={`${store.name} gallery image ${idx + 1}`}
+                width={600}
+                height={375}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center text-white text-xs font-semibold uppercase tracking-wider">
@@ -173,6 +177,10 @@ export default function StoreDetail() {
               <img
                 src={selectedImage}
                 alt="Enlarged gallery view"
+                width={800}
+                height={600}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-contain max-h-[85vh]"
               />
               <button

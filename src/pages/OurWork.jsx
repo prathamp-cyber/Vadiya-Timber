@@ -20,7 +20,7 @@ export default function OurWork() {
       title: "Luxury Villa Teak Ceiling & Paneling",
       category: "Residential",
       location: "Bangalore",
-      image: "/images/project-residence.jpg",
+      image: "/images/project-residence.webp",
       aspectRatio: "aspect-16/10",
       description: "Custom solid Burmese teak wood ceiling beams and matching acoustic wall cladding crafted for a private contemporary residence."
     },
@@ -29,7 +29,7 @@ export default function OurWork() {
       title: "Floating Teak Timber Staircase",
       category: "Architectural",
       location: "Bangalore",
-      image: "/images/project-staircase.jpg",
+      image: "/images/project-staircase.webp",
       aspectRatio: "aspect-3/4",
       description: "Hand-selected, kiln-seasoned teak treads engineered for a seamless floating cantilever staircase with minimalist aesthetic."
     },
@@ -38,7 +38,7 @@ export default function OurWork() {
       title: "Resort Outdoor Teak Decking",
       category: "Residential",
       location: "Coorg, Karnataka",
-      image: "/images/project-decking.jpg",
+      image: "/images/project-decking.webp",
       aspectRatio: "aspect-4/3",
       description: "Weather-resistant tongue-and-groove teak decking planks surrounding an outdoor infinity pool and lounge pavilion."
     },
@@ -47,7 +47,7 @@ export default function OurWork() {
       title: "Corporate Slat Wall & Reception",
       category: "Commercial",
       location: "Bangalore (Anjanapura)",
-      image: "/images/project-office.jpg",
+      image: "/images/project-office.webp",
       aspectRatio: "aspect-16/10",
       description: "Custom teak wood acoustic slat wall cladding and sculpted solid timber reception desk for a tech corporate headquarters."
     },
@@ -56,7 +56,7 @@ export default function OurWork() {
       title: "Kandla Port Bulk Log Sizing Hub",
       category: "Wholesale Supply",
       location: "Gandhidham Hub",
-      image: "/images/gandhidham.jpg",
+      image: "/images/gandhidham.webp",
       aspectRatio: "aspect-4/3",
       description: "Primary log sizing, thermal seasoning, and wholesale distribution facility handling over 5,000 metric tons of imported timber annually."
     },
@@ -65,7 +65,7 @@ export default function OurWork() {
       title: "Architectural Hardwood Showroom",
       category: "Architectural",
       location: "Anjanapura Showroom",
-      image: "/images/bangalore-1.jpg",
+      image: "/images/bangalore-1.webp",
       aspectRatio: "aspect-3/4",
       description: "A showcase of Burmese teak flooring samples, custom moulding edge profiles, and exotic hardwood wall cladding mockups."
     },
@@ -74,7 +74,7 @@ export default function OurWork() {
       title: "Bespoke Woodcraft & Solid Door Center",
       category: "Residential",
       location: "Jigni, Bangalore",
-      image: "/images/bangalore-2.jpg",
+      image: "/images/bangalore-2.webp",
       aspectRatio: "aspect-16/10",
       description: "Tailored timber cuts for luxury home renovation, solid entrance doors, and handcrafted wooden furniture displays."
     },
@@ -83,7 +83,7 @@ export default function OurWork() {
       title: "Precision Sawing & Milling Operations",
       category: "Wholesale Supply",
       location: "Gandhidham Sawmills",
-      image: "/images/gallery-1.jpg",
+      image: "/images/gallery-1.webp",
       aspectRatio: "aspect-4/3",
       description: "Laser-guided horizontal band saw mills cutting heavy structural logs into custom dimensioned planks and beams."
     },
@@ -92,7 +92,7 @@ export default function OurWork() {
       title: "Seasoned Teak Plank Staging Yard",
       category: "Wholesale Supply",
       location: "Gandhidham Hub",
-      image: "/images/gallery-2.jpg",
+      image: "/images/gallery-2.webp",
       aspectRatio: "aspect-3/4",
       description: "Kiln-dried hardwood plank storage and palletized staging for nationwide commercial site delivery."
     },
@@ -101,7 +101,7 @@ export default function OurWork() {
       title: "Exotic Hardwood Veneer & Cladding Display",
       category: "Architectural",
       location: "Bangalore (Anjanapura)",
-      image: "/images/gallery-3.jpg",
+      image: "/images/gallery-3.webp",
       aspectRatio: "aspect-16/10",
       description: "High-grade decorative wood veneers and architectural timber panel displays for commercial interior design projects."
     },
@@ -110,7 +110,7 @@ export default function OurWork() {
       title: "Custom Solid Burmese Teak Entrance Door",
       category: "Residential",
       location: "Indiranagar, Bangalore",
-      image: "/images/gallery-4.jpg",
+      image: "/images/gallery-4.webp",
       aspectRatio: "aspect-4/3",
       description: "Precision-carved solid Burmese teak double entrance door with natural hand-rubbed oil finish."
     },
@@ -119,7 +119,7 @@ export default function OurWork() {
       title: "Bespoke Furniture Joinery & Wood Cuts",
       category: "Commercial",
       location: "Bangalore (Jigni)",
-      image: "/images/gallery-5.jpg",
+      image: "/images/gallery-5.webp",
       aspectRatio: "aspect-3/4",
       description: "Finely sanded furniture-grade teak wood planks and joinery cuts for boutique hotel and restaurant interiors."
     }
@@ -212,6 +212,10 @@ export default function OurWork() {
               <img
                 src={project.image}
                 alt={`${project.title} - ${project.location} project`}
+                width={600}
+                height={400}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 absolute inset-0"
               />
 
@@ -264,6 +268,10 @@ export default function OurWork() {
                 <img
                   src={selectedProject.image}
                   alt={`${selectedProject.title} - ${selectedProject.location}`}
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain max-h-[60vh] md:max-h-[80vh]"
                 />
               </div>

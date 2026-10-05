@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import IntroSplash from './components/IntroSplash';
 import Home from './pages/Home';
-import Services from './pages/Services';
-import OurWork from './pages/OurWork';
-import StoreDetail from './pages/StoreDetail';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+
+// Lazy-loaded route components for code splitting & initial bundle size reduction
+const Services = lazy(() => import('./pages/Services'));
+const OurWork = lazy(() => import('./pages/OurWork'));
+const StoreDetail = lazy(() => import('./pages/StoreDetail'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(() => {
@@ -45,14 +47,16 @@ export default function App() {
         >
           <Navbar />
           <main className="flex-grow pt-20">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/our-work" element={<OurWork />} />
-              <Route path="/store/:storeId" element={<StoreDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<div className="min-h-[50vh] bg-white" />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/our-work" element={<OurWork />} />
+                <Route path="/store/:storeId" element={<StoreDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
         </motion.div>

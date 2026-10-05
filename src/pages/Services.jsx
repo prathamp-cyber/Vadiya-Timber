@@ -22,7 +22,7 @@ export default function Services() {
     {
       id: "import-sourcing",
       title: "Timber Import & Sourcing",
-      image: "/images/gandhidham.jpg",
+      image: "/images/gandhidham.webp",
       description: "Direct import of certified Burmese Teak, Honne, Sal, and structural hardwoods from sustainable global forest concessions, handling full port logistics through Kandla port.",
       bullets: [
         "Direct import from certified sustainable forests",
@@ -33,7 +33,7 @@ export default function Services() {
     {
       id: "sawing-milling",
       title: "Log Sawing & Precision Milling",
-      image: "/images/gallery-1.jpg",
+      image: "/images/gallery-1.webp",
       description: "State-of-the-art horizontal band saw mills and laser-guided sizing machinery delivering precision cut-to-spec timber planks, beams, and structural logs.",
       bullets: [
         "Laser-guided mill cutting for exact dimensions",
@@ -44,7 +44,7 @@ export default function Services() {
     {
       id: "kiln-drying",
       title: "Kiln Drying & Thermal Seasoning",
-      image: "/images/gallery-2.jpg",
+      image: "/images/gallery-2.webp",
       description: "Scientific thermal seasoning kilns reducing internal wood moisture content to optimal architectural standards, preventing warping, cracking, and decay over decades.",
       bullets: [
         "Controlled moisture reduction (8% - 12% target)",
@@ -55,7 +55,7 @@ export default function Services() {
     {
       id: "architectural-timber",
       title: "Custom Architectural Timber",
-      image: "/images/gallery-3.jpg",
+      image: "/images/gallery-3.webp",
       description: "Precision wood profiling for luxury residential wall paneling, tongue-and-groove decking, solid door frames, ceiling beams, and decorative interior mouldings.",
       bullets: [
         "Tongue-and-groove weather-resistant decking",
@@ -66,7 +66,7 @@ export default function Services() {
     {
       id: "wholesale-supply",
       title: "Bulk & Wholesale Supply",
-      image: "/images/gallery-4.jpg",
+      image: "/images/gallery-4.webp",
       description: "High-capacity commercial timber supply fulfilling large-scale construction contracts, furniture manufacturers, joinery mills, and retail dealers nationwide.",
       bullets: [
         "Scalable bulk log & sawn timber volume",
@@ -77,7 +77,7 @@ export default function Services() {
     {
       id: "staging-logistics",
       title: "Site Staging & Logistics",
-      image: "/images/gallery-5.jpg",
+      image: "/images/gallery-5.webp",
       description: "Dedicated transport networks and regional staging warehouses operating directly from Kandla port to job sites across Gujarat, Karnataka, and major national hubs.",
       bullets: [
         "Direct-to-site scheduled truck delivery",
@@ -156,6 +156,10 @@ export default function Services() {
                   <img
                     src={service.image}
                     alt={`${service.title} - Vadiya Impex service`}
+                    width={600}
+                    height={375}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>

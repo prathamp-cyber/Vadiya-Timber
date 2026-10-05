@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { stores } from '../data/stores';
 import { FaArrowRight, FaQuoteLeft } from 'react-icons/fa';
-import heroBg from '../assets/images/hero-bg.jpg';
 import { revealItemVariants } from '../components/Navbar';
 
 export default function Home() {
@@ -42,13 +41,13 @@ export default function Home() {
     {
       id: "burma-border",
       name: "Burma Border",
-      image: "/images/gallery-4.jpg",
+      image: "/images/gallery-4.webp",
       note: "Prized for exceptional natural oils, rich golden grain, and unmatched weather resistance."
     },
     {
       id: "teak-wood",
       name: "Teak wood",
-      image: "/images/gallery-2.jpg",
+      image: "/images/gallery-2.webp",
       note: "Renowned for high structural density, deep reddish-brown tones, and termite resistance."
     }
   ];
@@ -86,7 +85,7 @@ export default function Home() {
       <section
         className="-mt-20 relative w-full min-h-screen min-h-[100svh] flex flex-col justify-between px-6 pt-24 md:pt-28 pb-12 text-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(43,43,43,0.65), rgba(43,43,43,0.65)), url(${heroBg})`,
+          backgroundImage: `linear-gradient(rgba(43,43,43,0.65), rgba(43,43,43,0.65)), url('/images/hero-bg.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
@@ -158,6 +157,10 @@ export default function Home() {
                   <img
                     src={store.image}
                     alt={`${store.name} - ${store.city} branch facility`}
+                    width={400}
+                    height={250}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -295,6 +298,10 @@ export default function Home() {
                   <img
                     src={timber.image}
                     alt={`${timber.name} - high grade timber`}
+                    width={400}
+                    height={250}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
