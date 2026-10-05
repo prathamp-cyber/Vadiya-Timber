@@ -1,0 +1,13 @@
+# Vadiya Impex
+
+> Timber merchant and importer/exporter based in Gandhidham, Gujarat, with additional branches in Bangalore, Karnataka. Specializing in premium teak, architectural hardwoods, and custom timber solutions.
+
+## Pages
+
+- [Home](https://vadiyaimpex.com/): Overview of Vadiya Impex and our branches
+- [Services](https://vadiyaimpex.com/services): Timber import, milling, seasoning, and architectural timber services
+- [Our Work](https://vadiyaimpex.com/our-work): Portfolio of completed projects
+- [Contact](https://vadiyaimpex.com/contact): Contact information for all branches
+- [Gandhidham Branch](https://vadiyaimpex.com/store/gandhidham)
+- [Bangalore North Branch](https://vadiyaimpex.com/store/bangalore-1)
+- [Bangalore South Branch](https://vadiyaimpex.com/store/bangalore-2)

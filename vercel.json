@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!robots.txt|sitemap.xml|favicon.*|apple-touch-icon.*|assets/).*)",
+      "source": "/((?!robots.txt|sitemap.xml|llms.txt|ai-catalog.json|favicon.*|apple-touch-icon.*|assets/).*)",
       "destination": "/index.html"
     }
   ],
@@ -21,6 +21,24 @@
         {
           "key": "Content-Type",
           "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/ai-catalog.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
         }
       ]
     },

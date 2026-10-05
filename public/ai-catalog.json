@@ -1,0 +1,10 @@
+{
+  "name": "Vadiya Impex",
+  "description": "Timber merchant and importer/exporter serving Gandhidham, Gujarat and Bangalore, Karnataka",
+  "url": "https://vadiyaimpex.com",
+  "resources": [
+    { "name": "Services", "url": "https://vadiyaimpex.com/services" },
+    { "name": "Our Work", "url": "https://vadiyaimpex.com/our-work" },
+    { "name": "Contact", "url": "https://vadiyaimpex.com/contact" }
+  ]
+}
