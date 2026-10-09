@@ -114,8 +114,41 @@
       ]
     }
     </script>
+    <!-- Full-page Logo Loader Inline Styles -->
+    <style>
+      #page-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #2A1810;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 300ms ease;
+      }
+      #page-loader img {
+        animation: page-loader-pulse 1.2s ease-in-out infinite;
+      }
+      @keyframes page-loader-pulse {
+        0%, 100% {
+          transform: scale(0.94);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #page-loader img {
+          animation: none;
+        }
+      }
+    </style>
+    <noscript><style>#page-loader{display:none}</style></noscript>
   </head>
   <body>
+    <div id="page-loader" aria-hidden="true"><img src="/loader-logo.webp" width="96" height="108" alt=""></div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
